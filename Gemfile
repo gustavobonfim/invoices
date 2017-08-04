@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'bootstrap-select-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
-gem 'themify-icons-rails'
+gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
