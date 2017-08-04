@@ -1,0 +1,22 @@
+<h1 class="page-header">
+  New Invoice
+  <%= link_to 'Back', invoices_path, class: "btn btn-default pull-right" %>
+</h1>
+
+<%= simple_form_for(@invoice, html: { class: 'form-signin' }) do |f|  %>
+
+  <%= f.input :amount, as: :decimal, label: "Amount of the Invoice", require: true,
+                      autofocus: true,
+                      input_html: {value: number_with_precision(f.object.amount, precision: 2)}%>
+  <%= f.input :company, label: false, require: true,
+                      placeholder: "Company" %>
+  <%= f.input :contragent, label: false, require: true,
+                      placeholder: "Contragent" %>
+  <%= f.input :currency, label: false, require: true,
+                      placeholder: "Currency" %>
+  <%= f.input :date, label: "Date of Invoice", require: true %>
+
+  <%= f.button :submit, class: "btn btn-primary btn-block" %>
+
+
+<% end %>
