@@ -1,22 +1,17 @@
-<h1 class="page-header">
-  Editing Invoice #<%= @invoice.id %>
-  <%= link_to 'Back', invoices_path, class: "btn btn-default pull-right" %>
-</h1>
 
-<%= simple_form_for(@invoice, html: { class: 'form-signin' }) do |f|  %>
-
-  <%= f.input :amount, as: :decimal, label: "Amount of the Invoice", require: true,
-                      autofocus: true,
-                      input_html: {value: number_with_precision(f.object.amount, precision: 2)}%>
-  <%= f.input :company, label: false, require: true,
-                      placeholder: "Company" %>
-  <%= f.input :contragent, label: false, require: true,
-                      placeholder: "Contragent" %>
-  <%= f.input :currency, label: false, require: true,
-                      placeholder: "Currency" %>
-  <%= f.input :date, label: "Date of Invoice", require: true %>
-
-  <%= f.button :submit, class: "btn btn-primary btn-block" %>
-
-
-<% end %>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel panel-heading">
+        <h3 class="panel-title">Editing Invoice</h3>
+      </div>
+      <div class="panel-body">
+        <%= render 'form' %>
+      </div>
+      <div class="panel-footer">
+        <%= link_to 'Back', invoices_path, class: "btn btn-danger btn-sm" %>
+        <%= link_to 'Show', invoice_path(@invoice), class: "btn btn-info btn-sm" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,20 +3,20 @@
   <%= link_to 'Back', invoices_path, class: "btn btn-default pull-right" %>
 </h1>
 
-<div class="well row">
-  <div class="col-md-8">
-      <table class="table table-condensed">
-        <thead>
-          <tr>
-            <th>Company</th>
-            <th>Contragent</th>
-            <th>Amount</th>
-            <th>Currency</th>
-            <th>Date</th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Contragent</th>
+              <th>Amount</th>
+              <th>Currency</th>
+              <th>Date</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
               <td><%= @invoice.company %></td>
@@ -24,11 +24,16 @@
               <td><%= @invoice.amount %></td>
               <td><%= @invoice.currency %></td>
               <td><%= @invoice.date %></td>
-              <td><%= link_to 'Edit', edit_invoice_path(@invoice), class: "btn btn-warning btn-sm"%></td>
-              <td><%= link_to 'Delete', invoice_path(@invoice), method: :delete,
-                                      class: "btn btn-danger btn-sm"%></td>
             </tr>
           </tbody>
-      </table>
+        </table>
+      </div>
+      <div class="panel-footer">
+
+          <td><%= link_to 'Edit', edit_invoice_path(@invoice), class: "btn btn-warning btn-sm"%></td>
+          <td><%= link_to 'Delete', invoice_path(@invoice), method: :delete,
+                                  class: "btn btn-danger btn-sm"%></td>
+      </div>
+    </div>
   </div>
 </div>
