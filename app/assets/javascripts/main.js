@@ -40,7 +40,41 @@ $(document).ready(function(){
     var e = $('#invoice_total').text();
     $('#invoice_total1').empty();
     $('#invoice_total1').val(Number(e));
-  })
+  });
+
+  $('body').on('click', '#invoice_button', function() {
+    for (var i = 1; i < 11; i++) {
+      var id = i.toString();
+      bind($('#' + id), $('#modal_' + id));
+    };
+    bind2($('#invoice-number'), $('#modal_invoice_number'));
+    bind2($('#subtotal'), $('#modal_subtotal'));
+
+    var rows = $(".item-row");
+    $('#modal_tbody').empty();
+
+    for (i = 0; i < rows.length; i++ ) {
+      var row = rows[i];
+      var name = $(row).find(".item_name").val();
+      $('#modal_tbody').append('<tr class="modal-item-row"></tr>');
+      $('.modal-item-row:last').append('<td>' + name + '</td>');
+
+      var desc = $(row).find(".item_desc").val();
+      $('.modal-item-row:last').append('<td>' + desc + '</td>' );
+
+      var cost = $(row).find(".cost").val();
+      $('.modal-item-row:last').append('<td>' + cost + '</td>' );
+
+      var qty = $(row).find(".qty").val();
+      $('.modal-item-row:last').append('<td>' + qty + '</td>' );
+
+      var price = $(row).find(".price").text();
+      var subtotal_currency = $(row).find(".subtotal_currency").text();
+      $('.modal-item-row:last').append('<td>' + price + ' ' + '<span>' + subtotal_currency + '</span>' + '</td>' );
+
+    }
+  });
+
 
 
 
