@@ -8,6 +8,10 @@ $(document).ready(function(){
     format: 'dd-mm-yyyy'
   });
 
+  $('.input-daterange').datepicker({
+    format: 'dd-mm-yyyy'
+  });
+
   $('#invoice_date').datepicker().on('changeDate', function() {
     var date = $('#invoice_date').val();
     $('.invoice_header_date').empty();

@@ -1,7 +1,13 @@
 class InvoicesController < ApplicationController
 
   def index
-    @invoices = Invoice.all
+    @search = Invoice.ransack(params[:q])
+    @invoices = @search.result
+  end
+
+  def search
+    index
+    render :index
   end
 
   def new

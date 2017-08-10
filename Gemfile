@@ -36,6 +36,8 @@ gem 'bootstrap-select-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'whenever', :require => false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
