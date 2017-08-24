@@ -37,6 +37,7 @@ gem 'simple_form'
 gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'whenever', :require => false
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
