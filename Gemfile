@@ -38,6 +38,8 @@ gem 'themify-icons-rails' , github: 'scratch-soft/themify-icons-rails'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'whenever', :require => false
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'aws-sdk', '~> 2'
+gem "paperclip", "~> 5.0.0"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
