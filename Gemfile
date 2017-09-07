@@ -41,6 +41,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'aws-sdk', '~> 2'
 gem "paperclip", "~> 5.0.0"
 
+gem 'groupdate'
+gem 'chartkick'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

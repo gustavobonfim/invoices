@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-6">
+    <%= line_chart new_invoices_sum_path, label: 'Faturamento [valores em R$]', ytitle: 'Faturamento',
+    colors: ["#086bac", "#fbfcff"], legend: true %>
+  </div>
+  <div class="col-sm-6">
+    <%= area_chart new_invoices_count_path, label: '# Recibos', legend: true, ytitle: '# Recibos' %>
+  </div>
+  <div class="col-sm-6">
+    <%= line_chart new_invoices_company_path, label: 'Faturamento [valores em R$]', ytitle: 'Faturamento',
+    colors: ["#086bac", "#fbfcff"], legend: true %>
+  </div>
+  <div class="col-sm-6">
+    <%= column_chart new_invoices_sum_count_path, colors: ["#086bac", "#F25F5C"],
+                    backgroundColor: ["F5EE9E"], legend: true, discrete: true %>
+  </div>
+</div>

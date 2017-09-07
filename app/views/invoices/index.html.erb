@@ -2,13 +2,6 @@
       Invoice Listing
       <%= link_to 'New Invoice', new_invoice_path, class: "btn btn-default btn-sm pull-right" %>
     </h1>
-
-
-
-
-
-
-
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
@@ -67,8 +60,8 @@
             <% end %>
           </table>
         </div>
-
-
       </div>
     </div>
   </div>
+
+  <%= render 'data' %>

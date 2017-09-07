@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails-ujs
-
+//= require Chart.bundle
+//= require chartkick
 //= require bootstrap-sprockets
 //= require bootstrap-select
 //= require bootstrap/alert
