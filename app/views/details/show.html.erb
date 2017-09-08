@@ -1,0 +1,15 @@
+<h1 class="page-header">
+  This is my detail
+  <span><%= link_to 'Editar', edit_detail_path(current_user.detail), class: 'btn btn-primary pull-right' %></span>
+</h1>
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <p><%= current_user.detail.name %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <p><%= current_user.detail.birth_date %></p>
+  </div>
+</div>

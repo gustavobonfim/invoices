@@ -7,15 +7,32 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Invoices</a>
+      <a class="navbar-brand" href="#"><%= link_to 'Invoices', root_path, class: "navbar-brand" %></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></li>
+        <li><%= link_to 'Invoices', root_path %>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li>
+          <% if current_user %>
+              <li>
+                <%= link_to 'Minha Conta', detail_path(current_user.detail.id), class: 'btn btn-primary' %>
+              </li>
+            
+            <li>
+            <%= link_to 'Sair', destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to 'Abrir Conta', new_user_registration_path, class: 'btn btn-primary' %>
+            </li>
+            <li>
+              <%= link_to 'Entrar', new_user_session_path, class: 'btn btn-success' %>
+            </li>
+          <% end %>
       </ul>
     </div>
   </div>

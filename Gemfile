@@ -43,8 +43,13 @@ gem 'aws-sdk', '~> 2'
 gem "paperclip", "~> 5.0.0"
 gem "rack-timeout"
 
+gem 'devise'
+gem 'devise-bootstrap-views'
+
 gem 'groupdate'
 gem 'chartkick'
+
+# gem 'openssl'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

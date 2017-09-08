@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
 
   def home
-    @invoice = Invoice.last
+    if current_user
+      redirect_to invoices_path
+
+    end
   end
 
   def test
@@ -13,5 +16,7 @@ class PagesController < ApplicationController
     render json: Invoice.group_by_month(:created_at).sum(:amount)
 
   end
+
+  private
 
 end
