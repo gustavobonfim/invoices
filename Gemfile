@@ -49,8 +49,6 @@ gem 'devise-bootstrap-views'
 gem 'groupdate'
 gem 'chartkick'
 
-# gem 'openssl'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
