@@ -17,7 +17,7 @@
     </div>
 
 
-    <% if current_user && (!current_user.detail.name.nil? && !current_user.detail.birth_date.nil?)%>
+    <% if current_user %>
       <script>
         window.intercomSettings = {
           app_id: "<%= ENV['INTERCOM_SECRET_KEY'] %>",
